@@ -2,7 +2,7 @@
 基于 TaskWarrior 和 Conky 实现的简易 TaskList
 安装使用:
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ASGPIPO/TaskBoard-or-Ubuntu-Gnome/main/install.sh)"
+curl -SLf https://raw.githubusercontent.com/ASGPIPO/TaskBoard-or-Ubuntu-Gnome/main/install.sh | bash
 ```
 ## 适用平台
 Ubuntu 24.04LTS 
