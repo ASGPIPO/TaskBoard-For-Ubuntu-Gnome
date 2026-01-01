@@ -387,7 +387,7 @@ set_window_always_on_top() {
 
 check_tasks_count() {
     local count
-    count=$(task due.before:"$TASK_HORIZON" status:pending -OVERDUE count 2>/dev/null || echo "0")
+    count=$(task due.before:"$TASK_HORIZON" status:pending -OVERDUE -INSTANCE count 2>/dev/null || echo "0")
     # Remove non-numeric characters
     count=${count//[^0-9]/}
     echo "${count:-0}"
