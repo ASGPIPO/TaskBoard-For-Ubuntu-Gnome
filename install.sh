@@ -837,7 +837,7 @@ class TaskDialog(QWidget):
     def has_valid_tasks(self):
         try:
             result = subprocess.run(
-                ["task", "due.before:now+23h", "status:pending", "-OVERDUE", "count"],
+                ["task", "due.before:now+23h", "status:pending", "-OVERDUE", "-INSTANCE" "count"],
                 capture_output=True,
                 text=True
             )
@@ -868,7 +868,7 @@ def main():
     # 先检查是否需要显示
     try:
         result = subprocess.run(
-            ["task", "due.before:now+23h", "status:pending", "-OVERDUE", "count"],
+            ["task", "due.before:now+23h", "status:pending", "-OVERDUE", "-INSTANCE", "count"],
             capture_output=True,
             text=True
         )
